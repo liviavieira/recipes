@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Latest from "../components/Latest";
 import About from "../components/About";
+import Subscribe from "../components/Subscribe";
 
 const Main = styled.main``;
 
@@ -108,6 +109,12 @@ const Index = ({ data }) => {
           spoon={mains.imgspoon}
           title={mains.about}
           about={mains.lorem}
+        />
+        <Subscribe
+          title={mains.subscribe}
+          signup={mains.signup}
+          email={mains.email}
+          submit={mains.submit}
         />
       </Main>
     </>

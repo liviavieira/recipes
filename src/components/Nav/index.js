@@ -1,6 +1,8 @@
 import React from "react";
 import * as S from "./styles";
 
+import SubscribeBtn from "../Button";
+
 export default function Nav({
   logo,
   about,
@@ -14,7 +16,7 @@ export default function Nav({
       <S.Navigation>
         <S.Link href="">{about}</S.Link>
         <S.Link href="">{recipes}</S.Link>
-        <S.SubBtn>{subscribe}</S.SubBtn>
+        <SubscribeBtn content={subscribe} />
       </S.Navigation>
     </S.Menu>
   );

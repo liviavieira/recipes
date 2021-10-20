@@ -5,12 +5,14 @@ export const Menu = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 95%;
-  height: 5rem;
+  width: 93%;
+  height: 7rem;
 `;
 
 export const Logo = styled.img`
+  width: 3.5rem;
   cursor: pointer;
+  transition: .2s;
 `;
 
 export const Navigation = styled.nav`
@@ -22,9 +24,12 @@ export const Navigation = styled.nav`
 
 export const Link = styled.a`
   position: relative;
-  width: 7rem;
+  margin-right: 2rem;
+  width: 6rem;
+  padding: 10px 0;
   color: #373737;
   font: 500 1em 'Hurme Geometric Sans', sans-serif;
+  letter-spacing: 1.5px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -33,7 +38,7 @@ export const Link = styled.a`
   &:after {
     content: '';
     position: absolute;
-    top: -10px; right: 0;
+    top: 0; right: 0;
     width: 0;
     height: 2px;
     background: #000;
@@ -43,7 +48,7 @@ export const Link = styled.a`
   &:before {
     content: '';
     position: absolute;
-    bottom: -10px; left: 0;
+    bottom: 0; left: 0;
     width: 0;
     height: 2px;
     background: #000;
@@ -51,23 +56,25 @@ export const Link = styled.a`
   }
 
   &:hover {
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    text-shadow: 5px 5px 0 #bbb;
 
     &:before,
-    &:after { width: 2rem; }
+    &:after { width: 1rem; }
   }
 `;
 
 export const SubBtn = styled.button`
   position: relative;
-  margin-left: 2rem;
-  padding: .8rem 2.2rem;
+  margin-left: 1rem;
+  padding: 1.1rem 2.5rem .9rem;
   background: none;
   color: #373737;
   font: 500 1em 'Hurme Geometric Sans', sans-serif;
   border-radius: 3px;
-  border: 3px solid #000;
+  border: 4px solid #373737;
   text-transform: uppercase;
+  letter-spacing: 1.5px;
   overflow: hidden;
   cursor: pointer;
 
@@ -86,8 +93,9 @@ export const SubBtn = styled.button`
   &:before {
     content: '>';
     position: absolute;
-    top: 26%; right: 1rem;
-    font-size: 1.1em;
+    top: 30%; right: 1rem;
+    color: #373737;
+    font-size: 1.2em;
     transition: all .8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
   }
 

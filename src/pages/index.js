@@ -1,9 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
+import styled from "styled-components";
 
 import GlobalStyles from "../components/GlobalStyles";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
+import Latest from "../components/Latest";
+
+const Main = styled.main`
+
+`;
 
 export const query = graphql`
   query {
@@ -89,6 +95,17 @@ const Index = ({ data }) => {
           subscribe={headers.subscribe}
         />
       </Header>
+      <Main>
+        <Latest
+          title={mains.latesttitle}
+          textcake={mains.textcake}
+          textpizza={mains.textpizza}
+          textshake={mains.textshake}
+          cake={mains.imgcake}
+          pizza={mains.imgpizza}
+          shake={mains.imgshake}
+        />
+      </Main>
     </>
   );
 }

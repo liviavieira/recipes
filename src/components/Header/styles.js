@@ -12,11 +12,12 @@ export const TextBox = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100% - 5rem);
+  height: calc(100% - 7rem);
 `;
 
 export const Title = styled.h1`
   color: #373737;
+  letter-spacing: 10px;
   text-transform: uppercase;
   font: 600 6em 'Hurme Geometric Sans', sans-serif;
 `;

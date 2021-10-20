@@ -6,10 +6,9 @@ import GlobalStyles from "../components/GlobalStyles";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Latest from "../components/Latest";
+import About from "../components/About";
 
-const Main = styled.main`
-
-`;
+const Main = styled.main``;
 
 export const query = graphql`
   query {
@@ -104,6 +103,11 @@ const Index = ({ data }) => {
           cake={mains.imgcake}
           pizza={mains.imgpizza}
           shake={mains.imgshake}
+        />
+        <About
+          spoon={mains.imgspoon}
+          title={mains.about}
+          about={mains.lorem}
         />
       </Main>
     </>

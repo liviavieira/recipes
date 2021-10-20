@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Btn = styled.button`
   position: relative;
-  margin-left: 1rem;
+  margin-left: ${props => props.marginLeft && '2rem' };
   padding: 1.1rem 0 .9rem;
   width: ${props => props.width || '12.12rem'};
   background: none;
@@ -57,13 +57,15 @@ export default function Button({
   content,
   width,
   weight,
-  letterSpacing
+  letterSpacing,
+  marginLeft
 }) {
   return (
     <Btn
       width={width}
       weight={weight}
       letterSpacing={letterSpacing}
+      marginLeft={marginLeft}
     >
       {content}
     </Btn>

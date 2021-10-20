@@ -8,6 +8,7 @@ import Nav from "../components/Nav";
 import Latest from "../components/Latest";
 import About from "../components/About";
 import Subscribe from "../components/Subscribe";
+import Footer from "../components/Footer";
 
 const Main = styled.main``;
 
@@ -66,19 +67,16 @@ export const query = graphql`
         twitter {
           url
         }
+        info
       }
     }
   }
 `;
 
-
 const Index = ({ data }) => {
   const headers = data.recipedata.headers[0];
   const mains = data.recipedata.mains[0];
   const footers = data.recipedata.footers[0];
-  console.log("header", headers)
-  console.log("main", mains)
-  console.log("footer", footers)
 
   return (
     <>
@@ -95,6 +93,7 @@ const Index = ({ data }) => {
           subscribe={headers.subscribe}
         />
       </Header>
+
       <Main>
         <Latest
           title={mains.latesttitle}
@@ -117,6 +116,17 @@ const Index = ({ data }) => {
           submit={mains.submit}
         />
       </Main>
+      
+      <Footer
+        instagram={footers.instagram}
+        twitter={footers.twitter}
+        facebook={footers.facebook}
+        pinterest={footers.pinterest}
+        about={footers.about}
+        recipes={footers.recipes}
+        subscribe={footers.subscribe}
+        reference={footers.info}
+      />
     </>
   );
 }

@@ -26,7 +26,7 @@ export const Subtitle = styled.h3`
   font: 500 1.4em 'Hurme Geometric Sans', sans-serif;
 `;
 
-export const Subscribe = styled.form`
+export const Subscribe = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

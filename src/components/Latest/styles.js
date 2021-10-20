@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h2`
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 6rem;
   width: 16rem;
   color: #373737;
   letter-spacing: 2px;
@@ -35,7 +35,6 @@ export const Title = styled.h2`
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 6rem;
 `;
 
 export const Recipe = styled.figure`

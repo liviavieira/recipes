@@ -36,8 +36,8 @@ export default function Latest({
         <S.Title>{title}</S.Title>
 
         <S.Content>
-          {data.map(item => (
-            <S.Recipe>
+          {data.map((item, i) => (
+            <S.Recipe key={i}>
               <S.RecipeImg
                 src={item.img}
                 alt={item.alt}

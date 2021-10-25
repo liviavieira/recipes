@@ -59,8 +59,14 @@ export const Info = styled.div`
   font: 500 .7em 'Hurme Geometric Sans', sans-serif;
   color: #ffffff60;
   text-align: center;
+  word-break: break-word;
   background: #446061;
   transition: .2s;
 
   &:hover { color: #ffffff90; }
+
+  @media (max-width: 768px) {
+    padding: 1rem .5rem;
+    font-size: .8em;
+  }
 `;

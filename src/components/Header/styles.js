@@ -7,6 +7,12 @@ export const Container = styled.header`
   background-position: center;
   background-size: cover;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    margin: 1rem .5rem;
+    height: 120vh;
+    background-position: 80%;
+  }
 `;
 
 export const TextBox = styled.section`
@@ -14,6 +20,10 @@ export const TextBox = styled.section`
   align-items: center;
   justify-content: center;
   height: calc(100% - 7rem);
+
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 export const Title = styled.h1`
@@ -21,5 +31,14 @@ export const Title = styled.h1`
   letter-spacing: 10px;
   text-transform: uppercase;
   font: 600 6em 'Hurme Geometric Sans', sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 4em;
+  }
+
+  @media (max-width: 480px) {
+    letter-spacing: 5px;
+    font-size: 2em;
+  }
 `;
 

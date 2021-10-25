@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { Helmet } from "gatsby-plugin-react-helmet";
 import styled from "styled-components";
 
 import GlobalStyles from "../components/GlobalStyles";

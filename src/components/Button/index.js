@@ -13,7 +13,7 @@ const Btn = styled.button`
   border: 4px solid #373737;
   text-transform: uppercase;
   letter-spacing: ${props => props.letterSpacing || '1.5px'};
-  transition: .5s;
+  transition: all .5s;
   overflow: hidden;
   cursor: pointer;
 
@@ -51,6 +51,11 @@ const Btn = styled.button`
       right: .8rem;
     }
   }
+  
+  @media (max-width: 768px) {
+    margin-left: 0;
+    opacity: ${props => props.mobile ? '1' : '0'};
+  }
 `;
 
 export default function Button({
@@ -58,7 +63,8 @@ export default function Button({
   width,
   weight,
   letterSpacing,
-  marginLeft
+  marginLeft,
+  mobile
 }) {
   return (
     <Btn
@@ -66,6 +72,7 @@ export default function Button({
       weight={weight}
       letterSpacing={letterSpacing}
       marginLeft={marginLeft}
+      mobile={mobile}
     >
       {content}
     </Btn>

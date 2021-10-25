@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./styles";
 
 import Link from "../Link";
@@ -10,18 +10,22 @@ export default function Nav({
   recipes,
   subscribe,
 }) {
-  return (
-    <S.Menu>
-      <S.Logo src={logo.url} alt="Recipes Logo" />
+  const [mobile, setMobile] = useState(false);
 
-      <S.Navigation>
-        <Link content={about} />
-        <Link content={recipes} />
+  return (
+    <S.Menu mobile={mobile}>
+      <S.Logo src={logo.url} alt="Recipes Logo" mobile={mobile} />
+
+      <S.Navigation mobile={mobile}>
+        <Link content={about} mobile={mobile}/>
+        <Link content={recipes} mobile={mobile}/>
         <SubscribeBtn
           content={subscribe}
           marginLeft={true}
+          mobile={mobile}
         />
       </S.Navigation>
+      <S.MobileBtn onClick={() => setMobile(mobile ? false : true)} mobile={mobile} />
     </S.Menu>
   );
 }

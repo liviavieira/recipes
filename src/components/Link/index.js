@@ -42,8 +42,13 @@ export const Text = styled.a`
     &:before,
     &:after { width: 1rem; }
   }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    font-size: 1.5em;
+  }
 `;
 
-export default function Link({ content }) {
-  return <Text href="">{content}</Text>
+export default function Link({ content, mobile }) {
+  return <Text href="" mobile={mobile}>{content}</Text>
 }

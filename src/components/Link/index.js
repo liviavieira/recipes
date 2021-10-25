@@ -45,7 +45,7 @@ export const Text = styled.a`
 
   @media (max-width: 768px) {
     margin-left: 0;
-    opacity: ${props => props.mobile ? '1' : '0'};
+    font-size: 1.5em;
   }
 `;
 

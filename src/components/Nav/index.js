@@ -13,8 +13,8 @@ export default function Nav({
   const [mobile, setMobile] = useState(false);
 
   return (
-    <S.Menu>
-      <S.Logo src={logo.url} alt="Recipes Logo" />
+    <S.Menu mobile={mobile}>
+      <S.Logo src={logo.url} alt="Recipes Logo" mobile={mobile} />
 
       <S.Navigation mobile={mobile}>
         <Link content={about} mobile={mobile}/>

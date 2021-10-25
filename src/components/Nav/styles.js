@@ -1,27 +1,34 @@
 import styled from "styled-components";
 
 export const Menu = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   width: 93%;
   height: 7rem;
+  transition: .6s;
+  z-index: 1;
 
   @media (max-width: 768px) {
-    width: calc(100vw - 5rem);
-    height: calc(100vh - 5rem);
+    position: fixed;
+    top: 0;
+    left: ${props => props.mobile ? '0' : '100%'};
+    flex-direction: column-reverse;
+    width: 100vw;
+    height: 100vh;
   }
 `;
 
 export const Logo = styled.img`
   width: 3.5rem;
   cursor: pointer;
-  transition: .2s;
+  transition: .6s;
+  z-index: 1;
 
   @media (max-width: 768px) {
-    display: none;
+    margin-bottom: 2rem;
+    opacity: ${props => props.mobile ? '1' : '0'};
   }
 `;
 
@@ -33,10 +40,9 @@ export const Navigation = styled.nav`
   transition: .6s;
 
   @media (max-width: 768px) {
-    position: fixed;
-    left: ${props => props.mobile ? '0' : '100%'};
+    position: absolute;
     flex-direction: column;
-    margin-top: 2rem;
+    padding: 5rem 2rem;
     width: 100%;
     height: 100%;
     border-right: 1.5rem solid ${props => props.mobile ? '#373737' : 'transparent'};
@@ -47,8 +53,8 @@ export const Navigation = styled.nav`
 `;
 
 export const MobileBtn = styled.button`
-  position: absolute;
-  top: 1.6rem; right: .2rem;
+  position: fixed;
+  top: 2rem; right: 2rem;
   display: none;
   align-items: center;
   flex-direction: column;
@@ -64,7 +70,7 @@ export const MobileBtn = styled.button`
   &:after {
     position: relative;
     content: '';
-    width: 1.5rem;
+    width: 1.8rem;
     height: 4px;
     background: #373737;
     transition: .5s;

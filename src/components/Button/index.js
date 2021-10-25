@@ -54,7 +54,10 @@ const Btn = styled.button`
   
   @media (max-width: 768px) {
     margin-left: 0;
-    opacity: ${props => props.mobile ? '1' : '0'};
+    width: 100%;
+    height: 5rem;
+    font-size: 1.5em;
+    border-width: 6px;
   }
 `;
 

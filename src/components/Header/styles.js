@@ -6,6 +6,7 @@ export const Container = styled.header`
   background: url(${props => props.bg || 'https://image.winudf.com/v2/image1/Y29tLmFuZHJvbW8uZGV2OTgwOC5hcHAyMjg5NTFfc2NyZWVuXzJfMTU2Njk5OTAxM18wODM/screen-2.jpg?fakeurl=1&type=.jpg'});
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 `;
 
 export const TextBox = styled.section`
